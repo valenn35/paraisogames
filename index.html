@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rambo Proveedor</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0e0e0e;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 40px 20px;
+      background-image: url('fondo4.png');
+      background-size: cover;
+      background-position: center;
+      border-radius: 16px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+      animation: fadeIn 0.8s ease-in;
+      text-align: center;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+      cursor: pointer;
+    }
+
+    .header img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .header span {
+      font-size: 1.4em;
+      font-weight: bold;
+      color: #25d366;
+    }
+
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #25d366;
+      box-shadow: 0 0 10px rgba(37, 211, 102, 0.4);
+      margin-bottom: 15px;
+    }
+
+    .contact-name {
+      font-weight: 800;
+      font-size: 1.5em;
+      color: #ffd700;
+      text-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
+      margin-top: 12px;
+    }
+
+    .contact-desc {
+      font-size: 1.1em;
+      color: #ffffff;
+      font-weight: 500;
+      text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+      margin: 4px 0;
+    }
+
+    .cta-button {
+      background: linear-gradient(90deg, #25d366, #128c7e);
+      color: white;
+      padding: 20px 35px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1em;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 25px;
+      animation: heartbeat 1.5s infinite;
+      box-shadow: 0 0 15px #25d36680;
+      transition: transform 0.2s ease;
+    }
+
+    .cta-button:hover {
+      background: linear-gradient(90deg, #1ebe5d, #0c6f58);
+      transform: scale(1.03);
+    }
+
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.06);
+      }
+    }
+
+    .footer-links {
+      font-size: 0.85em;
+      color: #888;
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .footer-links a {
+      color: #25d366;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    .testimonials {
+      margin-top: 40px;
+      font-size: 0.9em;
+      text-align: left;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .testimonial {
+      background-color: #2a2a2a;
+      color: white;
+      border-radius: 10px 10px 10px 0;
+      padding: 14px 18px;
+      position: relative;
+      max-width: 85%;
+      font-size: 0.95em;
+      animation: fadeInBubble 0.5s ease;
+    }
+
+    .testimonial::after {
+      content: "";
+      position: absolute;
+      left: -10px;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-right: 10px solid #2a2a2a;
+      border-top: 10px solid transparent;
+    }
+
+    .progress-bar {
+      height: 4px;
+      background: #25d366;
+      width: 0%;
+      border-radius: 5px;
+      margin-top: 8px;
+      transition: width 5s linear;
+    }
+
+    @keyframes fadeInBubble {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+
+  <!-- Facebook Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '697522809629774');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=697522809629774&ev=PageView&noscript=1" />
+  </noscript>
+
+  <script>
+    const whatsappNumber = "+5493426496192";
+
+    function goToWhatsApp() {
+      fbq('track', 'Contact');
+      window.location.href = `https://wa.me/${whatsappNumber}?text=Hola!%20quiero%20un%20panel!%20Mi%20nombre%20es:`;
+    }
+
+    const testimonios = [
+      'jerecajeroo77: "Atención de primera. Recomendados!” ⭐⭐⭐⭐⭐',
+      'facuadm: "Empecé con ellos y me guiaron siempre 👑” ⭐⭐⭐⭐⭐',
+      'susifichass: "Trabajar con ellos es lo mejor 🙌. Increíble.” ⭐⭐⭐⭐⭐',
+      'maradona10adm: "Unos capos, mejores precios que cualquiera" ⭐⭐⭐⭐⭐',
+      'camicajera627: "Los verdaderos DIRECTOS de la plataforma" ⭐⭐⭐⭐⭐',
+      'pescadorr: "Desde que empecé trabajando con ellos no pare mas" ⭐⭐⭐⭐⭐',
+      'mari.linea3: "Muy rapidos y responsables👌" ⭐⭐⭐⭐⭐',
+      'martuprov: "Soy nueva, me ayudaron en todo" ⭐⭐⭐⭐⭐',
+      'chispitasbett: "El mejor proveedor con el que trabaje" ⭐⭐⭐⭐⭐',
+    ];
+
+    let current = 0;
+
+    function updateTestimonio() {
+      const testimonioDiv = document.getElementById('testimonial-text');
+      const progress = document.getElementById('progress-bar');
+      testimonioDiv.innerText = testimonios[current];
+      progress.style.transition = 'none';
+      progress.style.width = '0%';
+      setTimeout(() => {
+        progress.style.transition = 'width 5s linear';
+        progress.style.width = '100%';
+      }, 10);
+      current = (current + 1) % testimonios.length;
+    }
+
+    window.onload = () => {
+      updateTestimonio();
+      setInterval(updateTestimonio, 5000);
+    };
+  </script>
+  <!-- Facebook Pixel Code --><script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '871889615205654'); fbq('track', 'PageView');</script><noscript> <img height="1" width="1" src="https://www.facebook.com/tr?id=871889615205654&ev=PageView&noscript=1"/></noscript><!-- End Facebook Pixel Code -->
+</head>
+<body>
+  <div class="container">
+    <div class="header" onclick="goToWhatsApp()">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" />
+      <span>WhatsApp</span>
+    </div>
+
+    <a href="javascript:void(0);" onclick="goToWhatsApp()">
+      <img src="LOGO VERCEL.png" alt="Perfil" class="profile-pic" />
+    </a>
+
+    <div class="contact-name">RAMBO PROVEEDOR DIRECTO</div>
+    <div class="contact-desc">BONO DE BIENVENIDA!</div>
+    <div class="contact-desc">PANEL GRATIS</div>
+    <div class="contact-desc">PROVEEDOR VERIFICADO ✔️</div>
+    <div class="contact-desc">PLATAFORMAS VERIFICADAS ✔️</div>
+
+    <a class="cta-button" href="javascript:void(0);" onclick="goToWhatsApp()">¡PEDIR PANEL!</a>
+
+    <div class="footer-links">
+      <p><a href="javascript:void(0);" onclick="goToWhatsApp()">¿Aún no tienes WhatsApp? Descargar</a></p>
+      <p>
+        <a href="javascript:void(0);" onclick="goToWhatsApp()">Términos y condiciones</a> | <a href="javascript:void(0);" onclick="goToWhatsApp()">Política
+          de privacidad</a>
+      </p>
+    </div>
+
+    <div class="testimonials" onclick="goToWhatsApp()">
+      <div class="testimonial" id="testimonial-text"></div>
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+  </div>
+</body>
+</html>
